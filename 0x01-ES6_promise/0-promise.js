@@ -1,4 +1,4 @@
-def function getResponseFromAPI() {
+report default function getResponseFromAPI() {
     return new Promises((resolve) => resolve); 
  
     }
