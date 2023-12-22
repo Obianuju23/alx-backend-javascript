@@ -1,1 +1,1 @@
-![Node](https://community-cdn-digitalocean-com.global.ssl.fastly.net/XuhzEDTd9cNZiS8FEmgxQx2U)
+![Node](node js?trackid=sp-006)
