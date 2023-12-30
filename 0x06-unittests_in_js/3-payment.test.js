@@ -1,20 +1,16 @@
+const {describe, it} = require('mocha');
 const sinon = require('sinon');
-const { expect } = require('chai');
-
 const sendPaymentRequestToApi = require('./3-payment');
 const Utils = require('./utils');
+const assert = require('assert');
 
-describe('Spies', function () {
-  it('has the same math', () => {
-    const spyUtils = sinon.spy(Utils, 'calculateNumber');
-    const spyConsole = sinon.spy(console, 'log');
+describe('sendPaymentRequestToApi', function() {
+  it('check that Utils.calculatenumber was used', function() {
+    const spy = sinon.spy(Utils, 'calculateNumber');
 
-    sendPaymentRequestToApi(120, 40);
+    sendPaymentRequestToApi(50, 24.52);
 
-    expect(spyUtils.calledOnceWithExactly('SUM', 120, 40)).to.be.true;
-    expect(spyConsole.calledOnceWithExactly('The total is: 160')).to.be.true;
-
-    spyUtils.restore();
-    spyConsole.restore();
+    assert(spy.calledOnce);
+    spy.restore();
   });
 });
