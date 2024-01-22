@@ -11,4 +11,3 @@ export function queryAPI(endpoint) {
 
   return c;
 }
-
